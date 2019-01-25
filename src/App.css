@@ -1,32 +1,101 @@
-.App {
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  /* src: url('%PUBLIC_URL%/fonts/Montserrat-Regular.ttf'); /* IE9 Compat Modes */
+  src: local('Montserrat'),
+       /* url('../public/fonts/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       /* url('../public/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       /* url('../public/fonts/open-sans-v13-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+
+       url('%PUBLIC_URL%/fonts/Montserrat-Light.ttf') format('truetype'), /* Modern Browsers */
+       url('%PUBLIC_URL%/fonts/Montserrat-Reguar.ttf') format('truetype'), /* Modern Browsers */
+       url('%PUBLIC_URL%/fonts/Montserrat-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('%PUBLIC_URL%/fonts/Montserrat-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('%PUBLIC_URL%/fonts/Montserrat-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('%PUBLIC_URL%/fonts/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('%PUBLIC_URL%/fonts/Montserrat-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('%PUBLIC_URL%/fonts/Montserrat-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+body {
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-family: 'Montserrat';
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  padding: 40px;
+}
+.header-name {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.header-nav {
+  display: flex;
+  margin-left: auto;
+  flex-direction: row;
+  list-style-type: none;
+  align-items: center;
+}
+.header-nav-item {
+  display: flex;
+  padding: 0 24px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0;
+}
+.content {
+  padding: 0 24px;
+  background-color: #FFFFFF;
+}
+.footer {
+  margin: 0 auto;
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.footer-copyright {
+  color: #858E99;
+  font-weight: 300;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer-find-me {
+  color: #858E99;
+  font-weight: 300;
+  /* color: #373E47; */
+}
+.temp {
+  margin: auto;
+  min-height:100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+/* Mobile */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width : 320px) 
+  and (max-device-width : 480px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+      padding: 24px;
+    }
+    .header-name {
+      margin: auto;
+      text-align: center;
+    }
+    .header-nav {
+      padding-top: 16px;
+      padding-bottom: 16px;
+      margin: 0;
+    }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
