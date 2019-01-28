@@ -1,70 +1,133 @@
-@font-face {
-  font-family: 'Montserrat';
-  font-style: normal;
-  font-weight: 400;
-  /* src: url('%PUBLIC_URL%/fonts/Montserrat-Regular.ttf'); /* IE9 Compat Modes */
-  src: local('Montserrat'),
-       /* url('../public/fonts/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       /* url('../public/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       /* url('../public/fonts/open-sans-v13-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+/* Colors */
 
-       url('%PUBLIC_URL%/fonts/Montserrat-Light.ttf') format('truetype'), /* Modern Browsers */
-       url('%PUBLIC_URL%/fonts/Montserrat-Reguar.ttf') format('truetype'), /* Modern Browsers */
-       url('%PUBLIC_URL%/fonts/Montserrat-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('%PUBLIC_URL%/fonts/Montserrat-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('%PUBLIC_URL%/fonts/Montserrat-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('%PUBLIC_URL%/fonts/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('%PUBLIC_URL%/fonts/Montserrat-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('%PUBLIC_URL%/fonts/Montserrat-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+:root {
+  --black-10: #F5F8FC;
+  --black-20: #F2F4F5;
+  --black-30: #D5D9DE;
+  --black-40: #ABB4BE;
+  --black-50: #9DA6B0;
+  --black-60: #858E99;
+  --black-70: #6F7A87;
+  --black-80: #495662;
+  --black-90: #373E47;
+  --black-100: #23292F;
+
+  --white: #FFFFFF;
+  --accent: #F9BA32;
 }
+
+.white {
+  color: var(--white);
+}
+.black-10 {
+  color: var(--black-10);
+}
+.black-20 {
+  color: var(--black-20);
+}
+.black-30 {
+  color: var(--black-30);
+}
+.black-40 {
+  color: var(--black-40);
+}
+.black-50 {
+  color: var(--black-50);
+}
+.black-60 {
+  color: var(--black-60);
+}
+.black-70 {
+  color: var(--black-70);
+}
+.black-80 {
+  color: var(--black-80);
+}
+.black-90 {
+  color: var(--black-90);
+}
+.black-100 {
+  color: var(--black-100);
+}
+.accent {
+  color:  var(--accent);
+}
+.bg-white {
+  background-color: var(--white);
+}
+
+/* CSS */
+
 body {
-  background-color: #FFFFFF;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin: auto;
   font-family: 'Montserrat';
+  text-decoration: none;
+  background-color: var(--white);
+}
+hr {
+  height: 1px;
+  border: 0;
+  margin: 1em 0;
+  padding: 0; 
+  border-top: 1px solid var(--black-20);
+}
+.app {
+  margin: auto;
+  max-width: 1056px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 16px 0px 16px;
+}
+.content {
+  background-color: var(--white);
 }
 .header {
   display: flex;
   flex-direction: row;
-  padding: 40px;
-}
-.header-name {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  text-align: left;
 }
 .header-nav {
   display: flex;
-  margin-left: auto;
   flex-direction: row;
   list-style-type: none;
-  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-top: 16px;
 }
 .header-nav-item {
   display: flex;
-  padding: 0 24px;
   text-decoration: none;
-  font-weight: bold;
-  margin: 0;
+  margin-right: 64px;
 }
-.content {
-  padding: 0 24px;
-  background-color: #FFFFFF;
+.header-nav-item:hover {
+  color: var(--black-70);
 }
 .footer {
-  margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+}
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-nav-item {
+  display: flex;
+  text-decoration: none;
+  margin-right: 64px;
+}
+.footer-nav-item:hover {
+  color: var(--black-70);
 }
 .footer-copyright {
-  color: #858E99;
-  font-weight: 300;
-}
-.footer-find-me {
-  color: #858E99;
-  font-weight: 300;
-  /* color: #373E47; */
+  color: var(--black-80);
+  font-weight: normal;
 }
 .temp {
   margin: auto;
@@ -74,12 +137,159 @@ body {
   align-items: center;
 }
 
+
+/* Home - Hero Section */
+
+.section-hero {
+  display:  flex;
+  flex-direction: column;
+}
+.section-hero-content {
+  display: flex;
+  margin-bottom: 80px;
+}
+.intro-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  max-width: 488px;
+}
+.intro-name {
+  margin-top: 16px;
+  margin-left: -4px;
+}
+.intro-photo {
+  display: flex;
+  margin-left: auto;
+  margin-top: -16px;
+}
+
+/* Home - Me Section */
+
+.section-me {
+  display: flex;
+  flex-direction: column;
+
+  height: 600px;
+  padding: 80px 0 80px 0;
+}
+.section-me-header {
+  display: flex;
+}
+
+/* Home - Work Section */
+
+.section-portfolio {
+  display: flex;
+  flex-direction: column;
+
+  height: 600px;
+  padding: 80px 0 80px 0;
+}
+.section-portfolio-header {
+  display: flex;
+}
+
+/* Home - Career Section */
+
+.section-career {
+  display: flex;
+  flex-direction: column;
+
+  height: 300px;
+  padding: 80px 0 80px 0;
+}
+.section-career-content {
+  display: flex;
+  margin-top:  56px;
+  margin-bottom: 80px;
+}
+
+
+/* Typography */
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  /* src: url('%PUBLIC_URL%/fonts/Montserrat-Regular.ttf'); /* IE9 Compat Modes */ */
+  src:
+    /* url('../public/fonts/open-sans-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8
+    /* url('../public/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+    /* url('../public/fonts/open-sans-v13-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+
+    url('%PUBLIC_URL%/fonts/Montserrat-Light.ttf') format('truetype'), /* Modern Browsers */
+    url('%PUBLIC_URL%/fonts/Montserrat-Regular.ttf') format('truetype'), /* Modern Browsers */
+    url('%PUBLIC_URL%/fonts/Montserrat-Italic.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('%PUBLIC_URL%/fonts/Montserrat-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('%PUBLIC_URL%/fonts/Montserrat-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('%PUBLIC_URL%/fonts/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('%PUBLIC_URL%/fonts/Montserrat-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('%PUBLIC_URL%/fonts/Montserrat-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 56px;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--black-90);
+}
+h2 {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 56px;
+  text-transform: uppercase;
+  margin: 0;
+  color: var(--black-90);
+}
+h3 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--black-90);
+}
+h4 {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--black-90); 
+}
+h6 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0;
+}
+p {
+  
+}
+.copyright {
+  display: flex;
+  margin-top: 40px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+}
+
+
+/* Components */
+
+
+
+
 /* Mobile */
 
 /* Portrait and Landscape */
 @media only screen 
   and (min-device-width : 320px) 
   and (max-device-width : 480px) {
+
+    /* Header */
     .header {
       flex-direction: column;
       text-align: center;
@@ -93,6 +303,36 @@ body {
       padding-top: 16px;
       padding-bottom: 16px;
       margin: 0;
+    }
+
+    /* Section - Hero */
+    .section-hero {
+      display:  flex;
+      flex-direction: column;
+    }
+    .section-hero-content {
+      display: flex;
+      margin-bottom: 80px;
+    }
+    .intro-info {
+      display: flex;
+      flex-direction: column;
+      margin-top: 120px;
+      max-width: 488px;
+    }
+    .intro-name {
+      margin-top: 16px;
+      margin-left: -4px;
+    }
+    .intro-photo {
+      display: flex;
+      margin-left: auto;
+      margin-top: -16px;
+    }
+
+    .intro-photo {
+      display: flex;
+      display: none;
     }
 }
 

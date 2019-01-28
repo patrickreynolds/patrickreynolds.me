@@ -2,14 +2,13 @@ import React, { Component } from 'react';
 import {
   Route,
   NavLink,
-  HashRouter
 } from "react-router-dom";
 
-import Home from "./Home";
-import About from "./About";
-import Contact from "./Contact";
-import Footer from "./Footer"
-import Temp from "./Temp"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer"
+import Temp from "./pages/Temp"
 
 import './App.css';
 
@@ -28,13 +27,12 @@ class App extends Component {
         </div>)
       } else {
         return (
-        <HashRouter>
           <div className="app">
             <header className="header">
-              <NavLink exact to="/" className="header-name" style={{ textDecoration: 'none' }}><h1>Patrick Reynolds</h1></NavLink>
               <ul className="header-nav">
-                <NavLink to="/about" style={{ textDecoration: 'none' }}><li className="header-nav-item">About</li></NavLink>
-                <NavLink to="/contact" style={{ textDecoration: 'none' }}><li className="header-nav-item">Contact</li></NavLink>
+                <NavLink to="/work" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">Work</h6></NavLink>
+                <NavLink to="/blog" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">Blog</h6></NavLink>
+                <NavLink to="/about-me" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">Amout me</h6></NavLink>
               </ul>
             </header>
             <div className="content">
@@ -44,7 +42,6 @@ class App extends Component {
             </div>
             <Footer></Footer>
           </div>
-        </HashRouter>
         )
       }
   }
