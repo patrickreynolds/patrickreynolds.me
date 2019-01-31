@@ -6,6 +6,9 @@ import {
 import HR from "../components/HR"
 import Button from "../components/Button"
 import Job from "../components/Job"
+import Hobby from "../components/Hobby"
+import FactsColumn from "../components/HobbyColumn"
+import Fact from "../components/Fact"
 
 import IntroPhoto from "../images/intro-photo.png";
  
@@ -36,6 +39,73 @@ class Home extends Component {
           <div className="section-me-header">
             <h2>Me</h2>
             <Button primary style={{marginLeft: 'auto'}}>More about me</Button>
+          </div>
+          <div className="section-me-content">
+            <Hobby first type={"books"}></Hobby>
+            <Hobby type={"photos"}></Hobby>
+            <Hobby type={"writing"}></Hobby>
+          </div>
+
+          <h3 className="stats-n-facts-header">Stats 'n facts</h3>
+
+          <div className="stats-n-facts-content">
+            <FactsColumn first>
+              <Fact
+                first
+                question={"Born"}
+                answer={"Palm Springs, CA"}>
+              </Fact>
+              <Fact
+                question={"Myers Brigs"}
+                answer={"ENFJ"}>
+              </Fact>
+              <Fact
+                question={"Interests"}
+                answer={"Cooking, photography, reading, writing, basically any sport, ramen, and things with engines."}>
+              </Fact>
+              <Fact
+                question={"Idols & Mentors"}
+                answer={"Jack Dorsey, Tim Ferris, Simon Sinek, James Clear"}>
+              </Fact>
+            </FactsColumn>
+            <FactsColumn>
+              <Fact
+                first
+                question={"Favorite Book"}
+                answer={"The Four Agreements"}>
+              </Fact>
+              <Fact
+                question={"Favorite Movie"}
+                answer={"Good Will Hunting"}>
+              </Fact>
+              <Fact
+                question={"Favorite Country Visited"}
+                answer={"Japan"}>
+              </Fact>
+              <Fact
+                question={"Favorite Food"}
+                answer={"Raspberries"}>
+              </Fact>
+            </FactsColumn>
+            <FactsColumn>
+              <Fact
+                first
+                question={"Fun Fact"}
+                answer={"I've run with the bulls in Pamplona."}>
+              </Fact>
+              <Fact
+                question={"Countries Visited"}
+                answer={"19"}>
+              </Fact>
+              <Fact
+                question={"Dogs or Cats"}
+                answer={"Def dogs."}>
+              </Fact>
+              <Fact
+                question={"Pet Peeve"}
+                answer={"k."}>
+              </Fact>
+            </FactsColumn>
           </div>
 
           <HR></HR>

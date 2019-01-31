@@ -108,7 +108,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px auto;
+  margin: 80px auto;
 }
 .footer-nav {
   display: flex;
@@ -131,7 +131,7 @@ hr {
 }
 .temp {
   margin: auto;
-  min-height:100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,12 +141,12 @@ hr {
 /* Home - Hero Section */
 
 .section-hero {
-  display:  flex;
+  display: flex;
   flex-direction: column;
 }
 .section-hero-content {
   display: flex;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 .intro-info {
   display: flex;
@@ -170,12 +170,26 @@ hr {
   display: flex;
   flex-direction: column;
 
-  height: 600px;
-  padding: 80px 0 80px 0;
+  padding: 120px 0 0 0;
 }
 .section-me-header {
   display: flex;
 }
+.section-me-content {
+  display: flex;
+  margin-top: 80px;
+}
+.stats-n-facts-header {
+  margin: 0;
+  margin-top: 80px;
+  text-transform: uppercase;
+}
+.stats-n-facts-content {
+  display: flex;
+  margin-top:  40px;
+  margin-bottom: 120px;
+}
+
 
 /* Home - Work Section */
 
@@ -184,7 +198,7 @@ hr {
   flex-direction: column;
 
   height: 600px;
-  padding: 80px 0 80px 0;
+  padding: 120px 0 80px 0;
 }
 .section-portfolio-header {
   display: flex;
@@ -197,12 +211,12 @@ hr {
   flex-direction: column;
 
   height: 300px;
-  padding: 80px 0 80px 0;
+  padding: 120px 0 0 0;
 }
 .section-career-content {
   display: flex;
   margin-top:  56px;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 
@@ -230,7 +244,7 @@ hr {
 
 h1 {
   font-size: 56px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 56px;
   text-transform: uppercase;
   margin: 0;
@@ -238,35 +252,37 @@ h1 {
 }
 h2 {
   font-size: 56px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 56px;
   text-transform: uppercase;
   margin: 0;
   color: var(--black-90);
 }
 h3 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: 600;
   line-height: 28px;
   text-transform: uppercase;
   color: var(--black-90);
 }
 h4 {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 24px;
   color: var(--black-90); 
 }
 h6 {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 22px;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0;
 }
 p {
-  
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
 }
 .copyright {
   display: flex;
