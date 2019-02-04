@@ -16,25 +16,30 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <div className="section-hero">
+        <div className="section-hero row">
           <div className="section-hero-content">
-            <div className="intro-info">
-              <h6 className="accent">Hello! My name is</h6>
-              <h1 className="intro-name">Patrick <br />Reynolds</h1>
-              <p className="black-90">
-                I’m an engineer turned designer in San Francisco, CA. I currently work at Affirm where I’m focused on creating honest financial products that improve lives.
-                <br /><br />
-                This little website is my corner of the interwebs where I wanted to share some of my past <NavLink to="/work" style={{ textDecoration: 'none' }}><span className="accent">work</span></NavLink>, 
-                publish more thoughts publically on my <NavLink to="/blog" style={{ textDecoration: 'none' }}><span className="accent">blog</span></NavLink>, 
-                and give people an opprotunity to learn a little more <NavLink to="/about-me" style={{ textDecoration: 'none' }}><span className="accent">about me</span></NavLink>.
-                </p>
+            <div className="col-6 col-12-sm">
+              <div className="intro-info">
+                <h6 className="accent">Hello! My name is</h6>
+                <h1 className="intro-name">Patrick Reynolds</h1>
+                <p className="intro black-90">
+                  I’m an engineer turned designer in San Francisco, CA. I currently work at Affirm where I’m focused on creating honest financial products that improve lives.
+                  <br /><br />
+                  This little website is my corner of the interwebs where I wanted to share some of my past <NavLink to="/work" style={{ textDecoration: 'none' }}><span className="accent">work</span></NavLink>, 
+                  publish thoughts on my <NavLink to="/blog" style={{ textDecoration: 'none' }}><span className="accent">blog</span></NavLink>, 
+                  and share a little more <NavLink to="/about-me" style={{ textDecoration: 'none' }}><span className="accent">about me</span></NavLink>.
+                  </p>
+              </div>
             </div>
-            <div className="intro-photo">
-              <img ref="" src={IntroPhoto} />
+            <div className="col-6 intro-photo-content hidden-sm">
+              <div className="intro-photo col-10">
+                <img ref="" src={IntroPhoto} />
+              </div>
             </div>
           </div>
           <HR></HR>
         </div>
+        {/*
         <div className="section-me">
           <div className="section-me-header">
             <h2>Me</h2>
@@ -147,6 +152,7 @@ class Home extends Component {
           </div>
           <HR></HR>
         </div>
+        */}
       </div>
     );
   }
