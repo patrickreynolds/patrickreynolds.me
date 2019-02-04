@@ -4,9 +4,13 @@ import {
   NavLink,
 } from "react-router-dom";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./components/Contact";
+import ReactGA from 'react-ga'
+
+import Home from "./pages/Home"
+import Work from "./pages/Work"
+import Blog from "./pages/Blog"
+import About from "./pages/About"
+
 import Footer from "./components/Footer"
 import Temp from "./pages/Temp"
 
@@ -17,6 +21,10 @@ class App extends Component {
     super(props)
 
     this.temp = false
+  }
+
+  componentDidMount() {
+    ReactGA.initialize("UA-67271329-1")
   }
 
   render() {
@@ -52,15 +60,16 @@ class App extends Component {
                   <div className="header-nav right">
                     <NavLink to="/work" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">Work</h6></NavLink>
                     <NavLink to="/blog" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">Blog</h6></NavLink>
-                    <NavLink to="/about-me" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">About</h6></NavLink>
+                    <NavLink to="/about" style={{ textDecoration: 'none' }}><h6 className="header-nav-item black-50">About</h6></NavLink>
                   </div>
                 </div>
               </div>
             </header>
             <div className="content container">
-              <Route exact path="/" component={Home}/>
-              <Route path="/about" component={About}/>
-              <Route path="/contact" component={Contact}/>
+              <Route exact path="/" component={Home} />
+              <Route path="/work" component={Work} />
+              <Route path="/blog" component={Blog} />
+              <Route path="/about" component={About} />
             </div>
 
             <Footer></Footer>

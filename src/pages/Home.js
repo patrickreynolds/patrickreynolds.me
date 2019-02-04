@@ -3,6 +3,8 @@ import {
   NavLink,
 } from "react-router-dom";
 
+import ReactGA from 'react-ga'
+
 import HR from "../components/HR"
 import Button from "../components/Button"
 import Job from "../components/Job"
@@ -13,6 +15,11 @@ import Fact from "../components/Fact"
 import IntroPhoto from "../images/intro-photo.png";
  
 class Home extends Component {
+  componentDidMount() {
+    ReactGA.set({ page: '/'})
+    ReactGA.pageview('/')
+  }
+
   render() {
     return (
       <div>
@@ -40,6 +47,16 @@ class Home extends Component {
           <HR></HR>
         </div>
         {/*
+        <div className="section-portfolio">
+          <div className="section-portfolio-header">
+            <h2>Portfolio</h2>
+            <Button primary style={{marginLeft: 'auto'}}>View portfolio</Button>
+          </div>
+
+          <HR></HR>
+        </div>
+        */}
+        
         <div className="section-me">
           <div className="section-me-header">
             <h2>Me</h2>
@@ -115,14 +132,7 @@ class Home extends Component {
 
           <HR></HR>
         </div>
-        <div className="section-portfolio">
-          <div className="section-portfolio-header">
-            <h2>Portfolio</h2>
-            <Button primary style={{marginLeft: 'auto'}}>View portfolio</Button>
-          </div>
-
-          <HR></HR>
-        </div>
+        {/*
         <div className="section-career">
           <div className="section-career-header">
             <h2>Career</h2>
