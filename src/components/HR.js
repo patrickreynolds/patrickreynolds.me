@@ -8,7 +8,7 @@ const hrStyle = {
 class HR extends Component {
   render() {
     return (
-      <div style={hrStyle}></div>
+      <div className="col-12" style={hrStyle}></div>
     );
   }
 }

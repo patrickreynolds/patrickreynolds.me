@@ -7,6 +7,7 @@ const Button = styled.div`
   border: 1px solid ${props => props.primary ? "var(--accent)" : "var(--black-90)"};
 
   display: block;
+  margin-left: auto;
   padding: 16px 24px 16px 24px;
   cursor: pointer;
   text-align: middle;
@@ -18,8 +19,15 @@ const Button = styled.div`
   text-transform: uppercase;
   color: var(--black-90);
 
+  margin-bottom: ${props => props.large ? "0" : "120px"}
+
   &:hover {
-    background-color: var(--black-20)
+    background-color: var(--accent-hover);
+  }
+
+  @media only screen and (max-device-width: 45em) { /* 960px */
+    margin: auto;
+    margin-bottom: ${props => props.large ? "0" : "80px"}
   }
 `
 

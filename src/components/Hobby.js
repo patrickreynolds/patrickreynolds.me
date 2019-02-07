@@ -6,9 +6,13 @@ const HobbyContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  margin-left: ${props => props.first ? "0" : "24px"};
   text-align: center;
   cursor: pointer;
+  margin-bottom: 64px;
+
+  @media only screen and (max-device-width: 60em) { /* 960px */
+    margin-bottom: 40px;
+  }
 `
 
 const HobbyTitle = styled.h4`
@@ -82,10 +86,12 @@ class Hobby extends Component {
 
   render() {
     return (
-      <HobbyContainer first={this.props.first || false}>
-        <HobbyHero url={this.url(this.props.type)}></HobbyHero>
-        <HobbyTitle>{ this.title(this.props.type) }</HobbyTitle>
-      </HobbyContainer>
+      <div className="col-4 col-12-sm">
+        <HobbyContainer first={this.props.first || false}>
+          <HobbyHero url={this.url(this.props.type)}></HobbyHero>
+          <HobbyTitle>{ this.title(this.props.type) }</HobbyTitle>
+        </HobbyContainer>
+      </div>
     );
   }
 }

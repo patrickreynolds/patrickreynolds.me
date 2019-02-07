@@ -50,7 +50,7 @@ class App extends Component {
       )
       } else {
         return (
-          <div className="app col-12">
+          <div className="app">
             <header className="container header">
               <div className="row">
                 <div className="col-4 col-sm-12 header-name">
@@ -65,7 +65,7 @@ class App extends Component {
                 </div>
               </div>
             </header>
-            <div className="content container">
+            <div className="content">
               <Route exact path="/" component={Home} />
               <Route path="/work" component={Work} />
               <Route path="/blog" component={Blog} />
